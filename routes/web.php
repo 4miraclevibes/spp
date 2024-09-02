@@ -115,6 +115,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('spp/show/{id}', [SppController::class, 'show'])->name('spp.show');
 Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+Route::get('/report/keuangan', [ReportController::class, 'laporanKeuangan'])->name('report.keuangan');
 Route::get('generate-dummy-data', [ReportController::class, 'generateDummyData']);
 
 require __DIR__.'/auth.php';

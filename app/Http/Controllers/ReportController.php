@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\SppStudent;
 use App\Models\Grade;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -32,5 +33,11 @@ class ReportController extends Controller
                           ->get();
 
         return view('report.index', compact('months', 'years', 'grades', 'data'));
+    }
+
+    public function laporanKeuangan()
+    {
+        $students = Student::with(['grade'])->get();
+        return view('report', compact('students'));
     }
 }

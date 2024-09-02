@@ -40,4 +40,8 @@ class Student extends Model
     public function studentFee(){
         return $this->belongsTo(StudentFee::class);
     }
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
 }

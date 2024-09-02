@@ -33,8 +33,9 @@
         <label class="col-sm-2 col-form-label" for="status">Status</label>
         <div class="col-sm-10">
           <select name="status" class="form-select" id="status">
-            <option value="Pending" {{ $payment->status == 'Pending' ? 'selected' : '' }}>Pending</option>
-            <option value="Completed" {{ $payment->status == 'Completed' ? 'selected' : '' }}>Completed</option>
+            <option value="pending" {{ $payment->status == 'pending' ? 'selected' : '' }}>Pending</option>
+            <option value="ongoing" {{ $payment->status == 'ongoing' ? 'selected' : '' }}>Ongoing</option>
+            <option value="paid" {{ $payment->status == 'paid' ? 'selected' : '' }}>Paid</option>
           </select>
         </div>
       </div>
