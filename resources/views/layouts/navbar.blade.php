@@ -105,6 +105,11 @@
                             <div data-i18n="Analytics">Report</div>
                           </a>
                         </li>
+                        <li class="menu-item {{ Route::is('report.keuangan') ? 'active' : '' }}">
+                          <a href="{{ route('report.keuangan') }}" class="menu-link" target="_blank">
+                            <div data-i18n="Analytics">Report Keuangan</div>
+                          </a>
+                        </li>
                 </ul>
               </li>
               @endif
