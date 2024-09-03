@@ -5,17 +5,17 @@ yarn-error.log
 
 # Laravel 4 specific
 bootstrap/compiled.php
-app/storage/
+# app/storage/  # Hapus atau komentari baris ini
 
 # Laravel 5 & Lumen specific
-public/storage
+# public/storage  # Hapus atau komentari baris ini
 public/hot
 
 # Laravel 5 & Lumen specific with changed public path
-public_html/storage
+# public_html/storage  # Hapus atau komentari baris ini
 public_html/hot
 
-storage/*.key
+# storage/*.key  # Hapus atau komentari baris ini
 .env
 Homestead.yaml
 Homestead.json
