@@ -37,6 +37,7 @@
             <td>{{ $item->studentFee->name }} - Rp. {{ number_format($item->studentFee->price, 0, ',', '.') }}</td>
             <td>
               <a href="{{ route('student.edit', $item->id) }}" class="btn btn-sm btn-warning"><i class="bx bx-edit-alt me-1"></i>Edit</a>
+              <a href="{{ route('student.show', $item->id) }}" class="btn btn-sm btn-primary"><i class="bx bx-show me-1"></i>Show</a>
               <form action="{{ route('student.destroy', $item->id) }}" method="post" style="display: inline-block">
                 @csrf
                 @method('delete')
