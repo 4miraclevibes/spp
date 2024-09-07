@@ -38,6 +38,7 @@ class GradeController extends Controller
     {
         Grade::create([
             'name' => $request->name,
+            'teacher_id' => $request->teacher_id,
         ]);
         return back()->with('success', 'SUKSESS');
     }
