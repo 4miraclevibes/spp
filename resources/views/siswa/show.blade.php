@@ -171,8 +171,11 @@
               <td>1.</td>
               <td>Uang Pangkal</td>
               <td>
+                @php
+                  $jumlahUp = 0;
+                @endphp
                 @foreach ($student->payments->where('fee_id', 2) as $payment)
-                Rp {{ number_format($jumlahUp = $payment->amount, 0, ',', '.') }}
+                Rp {{ number_format($jumlahUp += $payment->amount, 0, ',', '.') }}
                 @endforeach
               </td>
               <td>
